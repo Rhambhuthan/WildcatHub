@@ -10,11 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Database\WildcatHub.accdb" />
+    <None Remove="Database\WildcatHub_LabSystem.accdb" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Database\WildcatHub.accdb">
+    <Content Include="Database\WildcatHub_LabSystem.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
