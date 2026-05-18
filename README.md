@@ -32,8 +32,8 @@ WildcatHub is a C# Windows Forms laboratory equipment borrowing and management s
 - Source code: `WildcatHub/WildcatHub`
 - Solution file: `WildcatHub/WildcatHub.sln`
 - Final database: `WildcatHub/WildcatHub/Database/WildcatHub_LabSystem.accdb`
-- Feature diagram: `Exports/Diagrams/feature_function_connections.svg`
-- ERD: `Exports/Diagrams/wildcathub_erd.svg`
+- Diagram: `Exports/Diagrams/ERD.svg`
+- Database ERD: `Exports/Diagrams/wildcathub_erd.svg`
 - Presentation: `Exports/Presentation/WildcatHub_Presentation_easy_words.pptx`
 
 ## How To Run
