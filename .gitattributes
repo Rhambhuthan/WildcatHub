@@ -1,0 +1,7 @@
+*.accdb binary
+*.pptx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg text
+*.mmd text

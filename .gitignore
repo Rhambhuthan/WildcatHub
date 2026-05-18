@@ -1,0 +1,35 @@
+# Build output
+**/bin/
+**/obj/
+
+# Keep the final database submitted with the source project.
+!WildcatHub/WildcatHub/Database/
+!WildcatHub/WildcatHub/Database/WildcatHub_LabSystem.accdb
+!WildcatHub/WildcatHub/Database/WildcatHub.accdb
+
+# Visual Studio and user files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+Thumbs.db
+desktop.ini
+
+# Local backups generated during development
+*backup*
+*BACKUP*
+*.bak
+*.laccdb
+
+# Generated screenshots/frames not needed for source submission
+chart_frames/
+chart_frame.png
+
+# Old generated presentation copy; final PPT files are in Exports/Presentation.
+WildcatHub_Presentation_updated.pptx

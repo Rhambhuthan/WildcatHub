@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="720" viewBox="0 0 1640 720">
+<style>
+  .title{font:700 18px Segoe UI,Arial,sans-serif;fill:#2f203a}.small{font:13px Segoe UI,Arial,sans-serif;fill:#2f203a}.label{font:12px Segoe UI,Arial,sans-serif;fill:#5b3c67}.lane{font:700 22px Segoe UI,Arial,sans-serif;fill:#8b001a}.arrow{fill:none;stroke:#5b3c67;stroke-width:2.2;marker-end:url(#arrowhead)}.soft{fill:#fbf7fb;stroke:#eaddea;stroke-width:1}
+</style>
+<defs><marker id="arrowhead" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto"><path d="M0,0 L12,4 L0,8 Z" fill="#5b3c67"/></marker></defs>
+<rect width="100%" height="100%" fill="#fffaf3"/>
+<path d="M 275 128 L 304 128 L 304 116 L 340 116" class="arrow"/>
+<path d="M 275 480 L 316 480 L 316 146 L 340 146" class="arrow"/>
+<path d="M 275 160 L 306 160 L 306 52 L 642 52 L 642 126 L 660 126" class="arrow"/>
+<path d="M 590 120 L 620 120 L 620 42 L 324 42 L 324 268 L 340 268" class="arrow"/>
+<path d="M 275 292 L 300 292 L 300 430 L 340 430" class="arrow"/>
+<path d="M 590 145 L 618 145 L 618 370 L 324 370 L 324 460 L 340 460" class="arrow"/>
+<path d="M 590 296 L 606 296 L 606 522 L 330 522 L 330 488 L 340 488" class="arrow"/>
+<path d="M 590 158 L 626 158 L 626 424 L 660 424" class="arrow"/>
+<path d="M 910 128 L 942 128 L 942 225 L 646 225 L 646 286 L 660 286" class="arrow"/>
+<path d="M 275 330 L 630 330 L 630 60 L 958 60 L 958 128 L 980 128" class="arrow"/>
+<path d="M 590 104 L 620 104 L 620 36 L 948 36 L 948 158 L 980 158" class="arrow"/>
+<path d="M 590 312 L 636 312 L 636 218 L 968 218 L 968 188 L 980 188" class="arrow"/>
+<path d="M 1240 132 L 1266 132 L 1266 232 L 950 232 L 950 292 L 980 292" class="arrow"/>
+<path d="M 910 160 L 930 160 L 930 328 L 980 328" class="arrow"/>
+<path d="M 1240 166 L 1280 166 L 1280 532 L 950 532 L 950 450 L 980 450" class="arrow"/>
+<path d="M 275 350 L 636 350 L 636 540 L 956 540 L 956 482 L 980 482" class="arrow"/>
+<path d="M 1240 324 L 1264 324 L 1264 666 L 954 666 L 954 590 L 980 590" class="arrow"/>
+<path d="M 910 316 L 930 316 L 930 625 L 980 625" class="arrow"/>
+<path d="M 1240 118 L 1286 118 L 1286 158 L 1310 158" class="arrow"/>
+<path d="M 1240 294 L 1296 294 L 1296 190 L 1310 190" class="arrow"/>
+<path d="M 910 110 L 930 110 L 930 68 L 1292 68 L 1292 220 L 1310 220" class="arrow"/>
+<path d="M 1580 158 L 1612 158 L 1612 272 L 1290 272 L 1290 346 L 1310 346" class="arrow"/>
+<path d="M 275 310 L 300 310 L 300 690 L 1294 690 L 1294 382 L 1310 382" class="arrow"/>
+<path d="M 1580 196 L 1624 196 L 1624 612 L 1284 612 L 1284 514 L 1310 514" class="arrow"/>
+<path d="M 910 334 L 934 334 L 934 704 L 1300 704 L 1300 548 L 1310 548" class="arrow"/>
+<path d="M 590 168 L 612 168 L 612 682 L 660 682 L 660 630" class="arrow"/>
+<path d="M 910 176 L 940 176 L 940 706 L 642 706 L 642 610 L 660 610" class="arrow"/>
+<text x="40" y="42" class="lane">WildcatHub Database Relationship Map</text>
+<g id="labs"><rect x="45" y="90" width="230" height="108" rx="10" fill="#fff7dd" stroke="#b88400" stroke-width="2"/><title>Laboratories</title><text x="160" y="114" text-anchor="middle" class="title">Laboratories</text><text x="59" y="142" class="small">PK LabID</text><text x="59" y="160" class="small">LabName, LabCode</text><text x="59" y="178" class="small">IsActive</text></g>
+<g id="users"><rect x="45" y="245" width="230" height="126" rx="10" fill="#fff7dd" stroke="#b88400" stroke-width="2"/><title>Users</title><text x="160" y="269" text-anchor="middle" class="title">Users</text><text x="59" y="297" class="small">PK UserID</text><text x="59" y="315" class="small">SchoolID, FullName</text><text x="59" y="333" class="small">Email, Password</text><text x="59" y="351" class="small">IsActive</text></g>
+<g id="admins"><rect x="45" y="420" width="230" height="90" rx="10" fill="#fff7dd" stroke="#b88400" stroke-width="2"/><title>AdminCredentials</title><text x="160" y="444" text-anchor="middle" class="title">AdminCredentials</text><text x="59" y="472" class="small">PK AdminID</text><text x="59" y="490" class="small">FK LabID</text></g>
+<g id="subjects"><rect x="340" y="80" width="250" height="105" rx="10" fill="#e8f2ff" stroke="#276aa8" stroke-width="2"/><title>LabSubjects</title><text x="465" y="104" text-anchor="middle" class="title">LabSubjects</text><text x="354" y="132" class="small">PK SubjectID</text><text x="354" y="150" class="small">FK LabID</text><text x="354" y="168" class="small">SubjectCode, SubjectName</text></g>
+<g id="schedules"><rect x="340" y="225" width="250" height="112" rx="10" fill="#e8f2ff" stroke="#276aa8" stroke-width="2"/><title>SubjectSchedules</title><text x="465" y="249" text-anchor="middle" class="title">SubjectSchedules</text><text x="354" y="277" class="small">PK ScheduleID</text><text x="354" y="295" class="small">FK SubjectID</text><text x="354" y="313" class="small">Day, Time, Section, Room</text></g>
+<g id="enroll"><rect x="340" y="385" width="250" height="120" rx="10" fill="#e8f2ff" stroke="#276aa8" stroke-width="2"/><title>StudentSubjectEnrollments</title><text x="465" y="409" text-anchor="middle" class="title">StudentSubjectEnrollments</text><text x="354" y="437" class="small">PK EnrollmentID</text><text x="354" y="455" class="small">FK UserID</text><text x="354" y="473" class="small">FK SubjectID</text><text x="354" y="491" class="small">FK ScheduleID</text></g>
+<g id="eq"><rect x="660" y="80" width="250" height="125" rx="10" fill="#eef8ea" stroke="#407a38" stroke-width="2"/><title>Equipment</title><text x="785" y="104" text-anchor="middle" class="title">Equipment</text><text x="674" y="132" class="small">PK EquipmentID</text><text x="674" y="150" class="small">FK LabID</text><text x="674" y="168" class="small">Type, Qty, HasSerial</text><text x="674" y="186" class="small">Archive and threshold</text></g>
+<g id="units"><rect x="660" y="245" width="250" height="105" rx="10" fill="#eef8ea" stroke="#407a38" stroke-width="2"/><title>EquipmentUnits</title><text x="785" y="269" text-anchor="middle" class="title">EquipmentUnits</text><text x="674" y="297" class="small">PK UnitID</text><text x="674" y="315" class="small">FK EquipmentID</text><text x="674" y="333" class="small">SerialNumber, UnitStatus</text></g>
+<g id="subeq"><rect x="660" y="395" width="250" height="90" rx="10" fill="#eef8ea" stroke="#407a38" stroke-width="2"/><title>SubjectEquipments</title><text x="785" y="419" text-anchor="middle" class="title">SubjectEquipments</text><text x="674" y="447" class="small">FK SubjectID</text><text x="674" y="465" class="small">FK EquipmentID</text></g>
+<g id="slips"><rect x="980" y="90" width="260" height="118" rx="10" fill="#fbe7ea" stroke="#9b001b" stroke-width="2"/><title>BorrowSlips</title><text x="1110" y="114" text-anchor="middle" class="title">BorrowSlips</text><text x="994" y="142" class="small">PK SlipID</text><text x="994" y="160" class="small">FK UserID, SubjectID</text><text x="994" y="178" class="small">FK ScheduleID</text><text x="994" y="196" class="small">Group, Status</text></g>
+<g id="items"><rect x="980" y="250" width="260" height="122" rx="10" fill="#fbe7ea" stroke="#9b001b" stroke-width="2"/><title>BorrowSlipItems</title><text x="1110" y="274" text-anchor="middle" class="title">BorrowSlipItems</text><text x="994" y="302" class="small">PK SlipItemID</text><text x="994" y="320" class="small">FK SlipID, EquipmentID</text><text x="994" y="338" class="small">Requested, Returned</text><text x="994" y="356" class="small">ItemReturnStatus</text></g>
+<g id="members"><rect x="980" y="420" width="260" height="92" rx="10" fill="#fbe7ea" stroke="#9b001b" stroke-width="2"/><title>BorrowSlipMembers</title><text x="1110" y="444" text-anchor="middle" class="title">BorrowSlipMembers</text><text x="994" y="472" class="small">FK SlipID</text><text x="994" y="490" class="small">FK UserID</text></g>
+<g id="bsunits"><rect x="980" y="555" width="260" height="92" rx="10" fill="#fbe7ea" stroke="#9b001b" stroke-width="2"/><title>BorrowSlipUnits</title><text x="1110" y="579" text-anchor="middle" class="title">BorrowSlipUnits</text><text x="994" y="607" class="small">FK SlipItemID</text><text x="994" y="625" class="small">FK UnitID</text></g>
+<g id="reports"><rect x="1310" y="110" width="270" height="132" rx="10" fill="#f4eff8" stroke="#73508a" stroke-width="2"/><title>DamageReports</title><text x="1445" y="134" text-anchor="middle" class="title">DamageReports</text><text x="1324" y="162" class="small">PK ReportID</text><text x="1324" y="180" class="small">FK SlipID, SlipItemID</text><text x="1324" y="198" class="small">FK EquipmentID</text><text x="1324" y="216" class="small">Damage qty, cost, status</text></g>
+<g id="rusers"><rect x="1310" y="310" width="270" height="105" rx="10" fill="#f4eff8" stroke="#73508a" stroke-width="2"/><title>DamageReportMembers</title><text x="1445" y="334" text-anchor="middle" class="title">DamageReportMembers</text><text x="1324" y="362" class="small">FK ReportID</text><text x="1324" y="380" class="small">FK UserID</text><text x="1324" y="398" class="small">share, restricted, paid</text></g>
+<g id="runits"><rect x="1310" y="480" width="270" height="92" rx="10" fill="#f4eff8" stroke="#73508a" stroke-width="2"/><title>DamageReportUnits</title><text x="1445" y="504" text-anchor="middle" class="title">DamageReportUnits</text><text x="1324" y="532" class="small">FK ReportID</text><text x="1324" y="550" class="small">FK UnitID</text></g>
+<g id="exp"><rect x="660" y="555" width="250" height="112" rx="10" fill="#fff1e6" stroke="#b15d16" stroke-width="2"/><title>Experiments / Manuals</title><text x="785" y="579" text-anchor="middle" class="title">Experiments / Manuals</text><text x="674" y="607" class="small">Experiments</text><text x="674" y="625" class="small">ExperimentItems</text><text x="674" y="643" class="small">ExperimentManuals</text><text x="674" y="661" class="small">ManualItems</text></g>
+</svg>

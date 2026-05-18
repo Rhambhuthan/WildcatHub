@@ -1,0 +1,93 @@
+%% Clear grouped ERD-style data map for WildcatHub.
+%% This uses flowchart blocks instead of Mermaid erDiagram to avoid stacked arrows.
+flowchart LR
+    classDef core fill:#fff7dd,stroke:#b88400,stroke-width:2px,color:#2f203a
+    classDef academic fill:#e8f2ff,stroke:#276aa8,stroke-width:1.5px,color:#2f203a
+    classDef inventory fill:#eef8ea,stroke:#407a38,stroke-width:1.5px,color:#2f203a
+    classDef borrow fill:#fbe7ea,stroke:#9b001b,stroke-width:1.5px,color:#2f203a
+    classDef report fill:#f4eff8,stroke:#73508a,stroke-width:1.5px,color:#2f203a
+    classDef experiment fill:#fff1e6,stroke:#b15d16,stroke-width:1.5px,color:#2f203a
+
+    subgraph Core[People and Laboratories]
+        direction TB
+        Laboratories["Laboratories<br/>PK LabID<br/>LabName, LabCode, IsActive"]:::core
+        Users["Users<br/>PK UserID<br/>SchoolID, FullName, Email, IsActive"]:::core
+        AdminCredentials["AdminCredentials<br/>PK AdminID<br/>FK LabID"]:::core
+    end
+
+    subgraph Academic[Subjects and Schedules]
+        direction TB
+        LabSubjects["LabSubjects<br/>PK SubjectID<br/>FK LabID"]:::academic
+        SubjectSchedules["SubjectSchedules<br/>PK ScheduleID<br/>FK SubjectID"]:::academic
+        StudentSubjectEnrollments["StudentSubjectEnrollments<br/>PK EnrollmentID<br/>FK UserID, SubjectID, ScheduleID"]:::academic
+    end
+
+    subgraph Inventory[Equipment Inventory]
+        direction TB
+        EquipmentCategories["EquipmentCategories<br/>PK CategoryID<br/>FK LabID"]:::inventory
+        Equipment["Equipment<br/>PK EquipmentID<br/>FK LabID<br/>Type, Qty, HasSerial"]:::inventory
+        EquipmentUnits["EquipmentUnits<br/>PK UnitID<br/>FK EquipmentID<br/>SerialNumber, UnitStatus"]:::inventory
+        SubjectEquipments["SubjectEquipments<br/>FK SubjectID<br/>FK EquipmentID"]:::inventory
+    end
+
+    subgraph Borrowing[Borrowing Workflow]
+        direction TB
+        BorrowSlips["BorrowSlips<br/>PK SlipID<br/>FK UserID, SubjectID, ScheduleID<br/>Group, Leader, Status"]:::borrow
+        BorrowSlipItems["BorrowSlipItems<br/>PK SlipItemID<br/>FK SlipID, EquipmentID<br/>Requested, Returned, Status"]:::borrow
+        BorrowSlipMembers["BorrowSlipMembers<br/>PK MemberID<br/>FK SlipID, UserID"]:::borrow
+        BorrowSlipUnits["BorrowSlipUnits<br/>PK BorrowSlipUnitID<br/>FK SlipItemID, UnitID"]:::borrow
+    end
+
+    subgraph Reports[Damage and Payment Reports]
+        direction TB
+        DamageReports["DamageReports<br/>PK ReportID<br/>FK SlipID, SlipItemID, EquipmentID<br/>DamageType, Qty, Cost, Status"]:::report
+        DamageReportUnits["DamageReportUnits<br/>PK DamageReportUnitID<br/>FK ReportID, UnitID"]:::report
+        DamageReportMembers["DamageReportMembers<br/>PK ReportMemberID<br/>FK ReportID, UserID<br/>Share, Restricted, Paid"]:::report
+    end
+
+    subgraph Experiments[Experiment Requirements]
+        direction TB
+        Experiments["Experiments<br/>PK ExperimentID<br/>FK SubjectID"]:::experiment
+        ExperimentItems["ExperimentItems<br/>FK ExperimentID, EquipmentID"]:::experiment
+        ExperimentManuals["ExperimentManuals<br/>PK ManualID<br/>FK SubjectID"]:::experiment
+        ExperimentManualItems["ExperimentManualItems<br/>FK ManualID, EquipmentID"]:::experiment
+    end
+
+    Laboratories --> AdminCredentials
+    Laboratories --> LabSubjects
+    Laboratories --> EquipmentCategories
+    Laboratories --> Equipment
+
+    LabSubjects --> SubjectSchedules
+    Users --> StudentSubjectEnrollments
+    LabSubjects --> StudentSubjectEnrollments
+    SubjectSchedules --> StudentSubjectEnrollments
+
+    LabSubjects --> SubjectEquipments
+    Equipment --> SubjectEquipments
+    Equipment --> EquipmentUnits
+
+    Users --> BorrowSlips
+    LabSubjects --> BorrowSlips
+    SubjectSchedules --> BorrowSlips
+    BorrowSlips --> BorrowSlipItems
+    BorrowSlips --> BorrowSlipMembers
+    Users --> BorrowSlipMembers
+    Equipment --> BorrowSlipItems
+    BorrowSlipItems --> BorrowSlipUnits
+    EquipmentUnits --> BorrowSlipUnits
+
+    BorrowSlips --> DamageReports
+    BorrowSlipItems --> DamageReports
+    Equipment --> DamageReports
+    DamageReports --> DamageReportUnits
+    EquipmentUnits --> DamageReportUnits
+    DamageReports --> DamageReportMembers
+    Users --> DamageReportMembers
+
+    LabSubjects --> Experiments
+    Experiments --> ExperimentItems
+    Equipment --> ExperimentItems
+    LabSubjects --> ExperimentManuals
+    ExperimentManuals --> ExperimentManualItems
+    Equipment --> ExperimentManualItems
